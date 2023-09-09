@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="library.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h2>List of books:</h2>
+        <div class="booklist" id="booklist">
+            <div class="bookheader" id="bookheader">
+                <h3>Title</h3>
+                <h3>Author</h3>
+                <h3>Pages</h3>
+                <h3>Read (Yes/No)</h3>
+            </div>
+        </div>
+        <button id="addbookbtn">Add Book</button>
+
+        <dialog id="bookDialog">
+            <form id="bookform">
+              <p class="inputsection">
+                <label> Title: </label>
+                <input type="text" id="booktitle" name="booktitle">
+                <label> Author: </label>
+                <input type="text" id="bookauthor" name="bookauthor">
+                <label> Pages: </label>
+                <input type="number" id="bookpages" name="bookpages" min="1">
+                <label> Have you read this book? </label>
+                <select id="bookread">
+                    <option>Yes</option>
+                    <option value="default">No</option>
+                </select>
+              </p>
+              <div>
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="default">Confirm</button>
+              </div>
+            </form>
+          </dialog>
+    </div>
+</body>
+</html>
